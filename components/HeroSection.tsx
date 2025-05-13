@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section
       className="h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/background.jpg')" }}
+      style={{ backgroundImage: "url('/spaceBg.svg')" }}
     >
       <div className="relative w-full h-[600px] flex items-center justify-center">
     
