@@ -10,9 +10,9 @@ export default function HeroSection() {
       className="h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: "url('/spaceBg.svg')" }}
     >
-      <div className="relative w-full h-[600px] flex items-center justify-center">
+      <div className="relative w-full max-h-[600px] flex items-center justify-center">
     
-        <svg viewBox="0 0 500 500" className="absolute w-[1500px] h-[1500px]">
+        <svg viewBox="0 0 500 500" className="absolute max-w-[1500px] max-h-[1500px]">
           <defs>
             <path
               id="arcPath"
@@ -35,15 +35,16 @@ export default function HeroSection() {
 
        
         <div
-          className="relative w-[600px] h-[600px] transition-transform duration-500 hover:rotate-6 cursor-pointer"
+          className="relative max-w-[500px] max-h-[500px] transition-transform duration-500 hover:rotate-6 cursor-pointer flex justify-center items-center"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
           <Image
             src={hovered ? "/cokohero2.svg" : "/cokohero.svg"}
             alt="Coko Hero"
-            fill
-            className="object-contain transition-opacity duration-300"
+            width={200}
+            height={200}
+            className="object-contain transition-opacity duration-300 md:w-[500px] md:h-[500px]"
           />
         </div>
       </div>

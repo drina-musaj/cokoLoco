@@ -3,21 +3,21 @@
 import React from 'react';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMood } from '@/app/moodSlice';
-import { RootState } from '@/app/store';
+import { setMood } from '@/app/redux/moodSlice';
+import { RootState } from '@/app/redux/store';
 
-import cokoFullSleep from '@/public/coko-fullsleep.png';
-import cokoFullConfused from '@/public/coko-fullconfused.png';
-import cokoInterrupted from '@/public/interrupted.png';
+import cokoSleepy from '@/public/coko-sleepy.png';
+import cokoConfused from '@/public/coko-confused.png';
+import cokoInterrupted from '@/public/coko-interrupted.png';
 
 const moods = [
   {
     name: 'Sleepy',
-    image: cokoFullSleep,
+    image: cokoSleepy,
   },
   {
     name: 'Confused',
-    image: cokoFullConfused,
+    image: cokoConfused,
   },
   {
     name: 'Interrupted',
@@ -33,7 +33,7 @@ const Card = () => {
     <div className="bg-[#0D0A2E] min-h-screen flex flex-col items-center justify-center px-4 py-10">
       <h1 className="text-center font-semibold text-4xl md:text-6xl text-white">
         Choose Coko's mood
-        <span className="font-[playfair] italic font-normal text-6xl pl-6">for the day</span>
+        <span className="font-[playfair] italic font-normal md:text-6xl pl-6">for the day</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 w-full max-w-6xl">
         {moods.map((mood) => (
