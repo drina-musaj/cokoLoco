@@ -10,6 +10,7 @@ import ReduxProvider from './redux/Provider'
 export const metadata: Metadata = {
   title: 'Coko Loco',
   description: 'It’s a Coko Loco World',
+ 
 }
 
 export default function RootLayout({
